@@ -17,7 +17,11 @@ namespace BlackJacker.Model
 
         public void Initialiser() // Creation du paquet avec ttes les cartes
         {
-
+            
+            for (int i = 0; i < 54;i++ )
+            {
+                
+            }
         }
 
         public void Melanger() // Methode sort
