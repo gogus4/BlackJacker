@@ -67,6 +67,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Carte.cs" />
+    <Compile Include="Model\Croupier.cs" />
+    <Compile Include="Model\Jeton.cs" />
+    <Compile Include="Model\Joueur.cs" />
+    <Compile Include="Model\Paquet.cs" />
+    <Compile Include="Model\Personne.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -92,6 +98,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\carte\01-coeur-img.png" />
+    <Resource Include="image\carte\01-pique-img.png" />
+    <Resource Include="image\carte\01-trefle-img.png" />
+    <Resource Include="image\carte\02-carreau-img.png" />
+    <Resource Include="image\carte\02-coeur-img.png" />
+    <Resource Include="image\carte\02-pique-img.png" />
+    <Resource Include="image\carte\02-trefle-img.png" />
+    <Resource Include="image\carte\03-carreau-img.png" />
+    <Resource Include="image\carte\03-coeur-img.png" />
+    <Resource Include="image\carte\03-pique-img.png" />
+    <Resource Include="image\carte\03-trefle-img.png" />
+    <Resource Include="image\carte\04-carreau-img.png" />
+    <Resource Include="image\carte\04-coeur-img.png" />
+    <Resource Include="image\carte\04-pique-img.png" />
+    <Resource Include="image\carte\04-trefle-img.png" />
+    <Resource Include="image\carte\05-carreau-img.png" />
+    <Resource Include="image\carte\05-coeur-img.png" />
+    <Resource Include="image\carte\05-pique-img.png" />
+    <Resource Include="image\carte\05-trefle-img.png" />
+    <Resource Include="image\carte\06-carreau-img.png" />
+    <Resource Include="image\carte\06-coeur-img.png" />
+    <Resource Include="image\carte\06-pique-img.png" />
+    <Resource Include="image\carte\06-trefle-img.png" />
+    <Resource Include="image\carte\07-carreau-img.png" />
+    <Resource Include="image\carte\07-coeur-img.png" />
+    <Resource Include="image\carte\07-pique-img.png" />
+    <Resource Include="image\carte\07-trefle-img.png" />
+    <Resource Include="image\carte\08-carreau-img.png" />
+    <Resource Include="image\carte\08-coeur-img.png" />
+    <Resource Include="image\carte\08-pique-img.png" />
+    <Resource Include="image\carte\08-trefle-img.png" />
+    <Resource Include="image\carte\09-carreau-img.png" />
+    <Resource Include="image\carte\09-coeur-img.png" />
+    <Resource Include="image\carte\09-pique-img.png" />
+    <Resource Include="image\carte\09-trefle-img.png" />
+    <Resource Include="image\carte\10-carreau-img.png" />
+    <Resource Include="image\carte\10-coeur-img.png" />
+    <Resource Include="image\carte\10-pique-img.png" />
+    <Resource Include="image\carte\10-trefle-img.png" />
+    <Resource Include="image\carte\D-carreau-img.png" />
+    <Resource Include="image\carte\D-coeur-img.png" />
+    <Resource Include="image\carte\D-pique-img.png" />
+    <Resource Include="image\carte\D-trefle-img.png" />
+    <Resource Include="image\carte\dos-08-img.png" />
+    <Resource Include="image\carte\R-carreau-img.png" />
+    <Resource Include="image\carte\R-coeur-img.png" />
+    <Resource Include="image\carte\R-pique-img.png" />
+    <Resource Include="image\carte\R-trefle-img.png" />
+    <Resource Include="image\carte\V-carreau-img.png" />
+    <Resource Include="image\carte\V-coeur-img.png" />
+    <Resource Include="image\carte\V-pique-img.png" />
+    <Resource Include="image\carte\V-trefle-img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\carte\01-carreau-img.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
