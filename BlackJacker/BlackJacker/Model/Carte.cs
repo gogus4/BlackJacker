@@ -13,6 +13,8 @@ namespace BlackJacker.Model
         public string couleur { get; set; }
         public string nom { get; set; }
 
+        public string pathImage { get; set; }
+
         public Carte()
         {
 
