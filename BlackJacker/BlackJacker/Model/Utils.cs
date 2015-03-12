@@ -16,7 +16,7 @@ namespace BlackJacker.Model
         {
             if (instance == null)
             {
-                instance = new Utils();   
+                instance = new Utils();
             }
             return instance;
         }
@@ -24,10 +24,24 @@ namespace BlackJacker.Model
         public int GetScore(List<Carte> cartes)
         {
             int score = 0;
+            int numberOfAs = 0;
             foreach (var carte in cartes)
             {
+                if (carte.nom == "a")
+                {
+                    numberOfAs++;
+                }
                 score += carte.valeur;
             }
+
+            if (numberOfAs > 0)
+            {
+                if (score > 21)
+                {
+                    score -= 10;
+                }
+            }
+
             return score;
         }
 
