@@ -27,6 +27,7 @@ namespace BlackJacker.Model
                     cartes.Add(new Carte(nom,couleur));
                 }
             }
+            Melanger();
         }
 
         public void Melanger() // Methode sort
