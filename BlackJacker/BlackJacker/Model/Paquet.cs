@@ -30,7 +30,18 @@ namespace BlackJacker.Model
 
         public void Melanger() // Methode sort
         {
-            cartes.Reverse();
+            Random rng = new Random();
+            int n = cartes.Count;
+
+            while(n>1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                Carte c = cartes[k];
+                cartes[k] = cartes[n];
+                cartes[n] = c;
+            }
+            
         }
 
         public Carte Retirer() // Retirer la premiere carte du paquet
