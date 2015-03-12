@@ -84,11 +84,13 @@ namespace BlackJacker
                 Img.Height = 100;
                 Banque.Children.Add(Img);
 
-                joueur.jeton -= int.Parse(Slider.Value.ToString());
+                joueur.jeton -= int.Parse(ValueSlider.Text.ToString());
                 MontantTotal.Text = joueur.jeton.ToString();
 
                 ScoreNoSplit.Text = Utils.Instance.GetScore(joueur.listSimple).ToString();
-                BetNoSplit.Text = Slider.Value.ToString();
+                BetNoSplit.Text = ValueSlider.Text.ToString();
+
+                Start.Visibility = Visibility.Collapsed;
             }
 
             else MessageBox.Show("Le montant de votre pari doit être supérieur à 0 €");
@@ -137,10 +139,25 @@ namespace BlackJacker
 
         private void SplitNoSplit_Click(object sender, RoutedEventArgs e)
         {
-
+            StackSplit.Visibility = Visibility.Visible;
         }
 
         private void DoubleNoSplit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CarteSplit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ResteSplit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DoubleSplit_Click(object sender, RoutedEventArgs e)
         {
 
         }
