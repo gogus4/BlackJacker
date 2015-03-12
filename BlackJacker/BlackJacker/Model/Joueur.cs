@@ -16,5 +16,16 @@ namespace BlackJacker.Model
         {
 
         }
+        public void split()
+        {
+
+            if (listSimple[0].nom == listSimple[1].nom)
+            {
+                listSplit.Add(listSimple[0]);
+                listSimple.Remove(listSimple[0]);
+            }
+
+
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace BlackJacker.Model
 
         public void AjouterCarte(Carte carte)
         {
-            
+            listSimple.Add(carte);
         }
     }
 }
