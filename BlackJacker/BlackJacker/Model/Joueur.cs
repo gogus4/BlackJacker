@@ -18,7 +18,7 @@ namespace BlackJacker.Model
         {
 
         }
-        public void split()
+        public void Split()
         {
 
             if (listSimple[0].nom == listSimple[1].nom)
@@ -27,11 +27,11 @@ namespace BlackJacker.Model
                 listSimple.Remove(listSimple[0]);
             }
         }
-        public void initialiserJeton()
+        public void InitialiserJeton()
         {
             jeton = 100;
         }
-        public void miserjeton(int valueMiser)
+        public void Miserjeton(int valueMiser)
         {
             mise = valueMiser;
             jeton -= mise;
