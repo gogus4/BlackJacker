@@ -21,5 +21,6 @@ namespace BlackJacker.Model
         {
             listSimple.Add(carte);
         }
+       
     }
 }
