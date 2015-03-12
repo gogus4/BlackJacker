@@ -13,6 +13,7 @@ namespace BlackJacker.Model
         public Paquet()
         {
             cartes = new List<Carte>();
+            Initialiser();
         }
 
         public void Initialiser() // Creation du paquet avec ttes les cartes

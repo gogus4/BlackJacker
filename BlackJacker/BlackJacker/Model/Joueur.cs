@@ -16,7 +16,7 @@ namespace BlackJacker.Model
 
         public Joueur()
         {
-
+            InitialiserJeton();
         }
 
         public void Split()
@@ -39,5 +39,11 @@ namespace BlackJacker.Model
             mise = valueMiser;
             jeton -= mise;
         }
+
+        public void AjouterSplit(Carte carte)
+        {
+            listSplit.Add(carte);
+        }
+
     }
 }

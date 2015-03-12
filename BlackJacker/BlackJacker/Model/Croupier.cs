@@ -12,17 +12,26 @@ namespace BlackJacker.Model
 
         public Croupier()
         {
-
+            paquet = new Paquet();
         }
 
-        public void Distribuer(Personne joueur)
+        public void Distribuer(Personne personne, Boolean isSplit)
         {
-            joueur.AjouterCarte(paquet.Retirer());
+            if (!isSplit)
+            {
+                personne.AjouterCarte(paquet.Retirer());
+            }
+
+            else
+            {
+              ((Joueur)personne).AjouterSplit(paquet.Retirer());
+            }
         }
 
         public void RetournerCarte()
         {
             
         }
+
     }
 }
