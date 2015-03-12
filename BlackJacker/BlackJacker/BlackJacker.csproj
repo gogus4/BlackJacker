@@ -73,6 +73,7 @@
     <Compile Include="Model\Joueur.cs" />
     <Compile Include="Model\Paquet.cs" />
     <Compile Include="Model\Personne.cs" />
+    <Compile Include="Model\Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

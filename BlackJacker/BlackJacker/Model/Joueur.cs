@@ -12,11 +12,14 @@ namespace BlackJacker.Model
 
         public List<Carte> listSplit { get; set; }
 
+        public int mise { get; set; }
+
         public Joueur()
         {
 
         }
-        public void split()
+
+        public void Split()
         {
 
             if (listSimple[0].nom == listSimple[1].nom)
@@ -24,8 +27,17 @@ namespace BlackJacker.Model
                 listSplit.Add(listSimple[0]);
                 listSimple.Remove(listSimple[0]);
             }
+        }
 
+        public void InitialiserJeton()
+        {
+            jeton = 100;
+        }
 
+        public void Miserjeton(int valueMiser)
+        {
+            mise = valueMiser;
+            jeton -= mise;
         }
     }
 }
