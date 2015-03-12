@@ -17,25 +17,20 @@ namespace BlackJacker.Model
 
         public void Initialiser() // Creation du paquet avec ttes les cartes
         {
-            string [] valeurCarte = new string[13]{"a","k","q","j","10","9","8","7","6","5","4","3","2"};
+            string [] nomCarte = new string[13]{"a","k","q","j","10","9","8","7","6","5","4","3","2"};
             string[] couleurCarte = new string[4] { "clubs", "diamonds", "hearts", "spades" };
-            foreach (var nom in valeurCarte)
+            foreach (var nom in nomCarte)
             {
                 foreach (var couleur in couleurCarte)
                 {
-                    cartes.Add(new Carte(nom,couleur, String.Format(@"\data\img\carte\{0}-{1}-75.png", couleur, nom)));
+                    cartes.Add(new Carte(nom,couleur));
                 }
-                
-            }
-            for (int i = 0; i < 54;i++ )
-            {
-                
             }
         }
 
         public void Melanger() // Methode sort
         {
-
+            cartes.Reverse();
         }
 
         public Carte Retirer() // Retirer la premiere carte du paquet
