@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="650" Width="800">
     <Window.Background>
-        <ImageBrush ImageSource="image/Background.jpg"/>
+        <ImageBrush ImageSource="data/img/Background.jpg"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -31,18 +31,16 @@
                     <TextBlock Text="Montant :" FontSize="14" HorizontalAlignment="Right"/>
                 </Grid>
 
-                <StackPanel x:Name="JoueurNoSplit" Orientation="Horizontal" VerticalAlignment="Center">
+                <StackPanel x:Name="JoueurNoSplit" Background="Transparent" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center">
                     <StackPanel.Resources>
                         <Style TargetType="{x:Type Image}">
-                            <Setter Property="Margin" Value="-10,0,0,0"/>
+                            <Setter Property="Margin" Value="-50,0,0,0"/>
                         </Style>
                     </StackPanel.Resources>
 
-                    <Image Source="image/carte/01-carreau-img.png" ></Image>
-                    <Image Source="image/carte/01-carreau-img.png" ></Image>
-                    <Image Source="image/carte/01-carreau-img.png" ></Image>
-                    <Image Source="image/carte/01-carreau-img.png" ></Image>
-                    <Image Source="image/carte/01-carreau-img.png" ></Image>
+                    <Image Source="data/img/cartes/clubs-2-75.png" ></Image>
+                    <Image Source="data/img/cartes/clubs-2-75.png" ></Image>
+                    <Image Source="data/img/cartes/clubs-2-75.png" ></Image>
                 </StackPanel>
             </StackPanel>
 

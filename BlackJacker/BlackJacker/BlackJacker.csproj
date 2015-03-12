@@ -90,7 +90,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="image\carte\Thumbs.db" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,62 +100,69 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\carte\01-carreau-img.png" />
-    <Resource Include="image\carte\01-coeur-img.png" />
-    <Resource Include="image\carte\01-pique-img.png" />
-    <Resource Include="image\carte\01-trefle-img.png" />
-    <Resource Include="image\carte\02-carreau-img.png" />
-    <Resource Include="image\carte\02-coeur-img.png" />
-    <Resource Include="image\carte\02-pique-img.png" />
-    <Resource Include="image\carte\02-trefle-img.png" />
-    <Resource Include="image\carte\03-carreau-img.png" />
-    <Resource Include="image\carte\03-coeur-img.png" />
-    <Resource Include="image\carte\03-pique-img.png" />
-    <Resource Include="image\carte\03-trefle-img.png" />
-    <Resource Include="image\carte\04-carreau-img.png" />
-    <Resource Include="image\carte\04-coeur-img.png" />
-    <Resource Include="image\carte\04-pique-img.png" />
-    <Resource Include="image\carte\04-trefle-img.png" />
-    <Resource Include="image\carte\05-carreau-img.png" />
-    <Resource Include="image\carte\05-coeur-img.png" />
-    <Resource Include="image\carte\05-pique-img.png" />
-    <Resource Include="image\carte\05-trefle-img.png" />
-    <Resource Include="image\carte\06-carreau-img.png" />
-    <Resource Include="image\carte\06-coeur-img.png" />
-    <Resource Include="image\carte\06-pique-img.png" />
-    <Resource Include="image\carte\06-trefle-img.png" />
-    <Resource Include="image\carte\07-carreau-img.png" />
-    <Resource Include="image\carte\07-coeur-img.png" />
-    <Resource Include="image\carte\07-pique-img.png" />
-    <Resource Include="image\carte\07-trefle-img.png" />
-    <Resource Include="image\carte\08-carreau-img.png" />
-    <Resource Include="image\carte\08-coeur-img.png" />
-    <Resource Include="image\carte\08-pique-img.png" />
-    <Resource Include="image\carte\08-trefle-img.png" />
-    <Resource Include="image\carte\09-carreau-img.png" />
-    <Resource Include="image\carte\09-coeur-img.png" />
-    <Resource Include="image\carte\09-pique-img.png" />
-    <Resource Include="image\carte\09-trefle-img.png" />
-    <Resource Include="image\carte\10-carreau-img.png" />
-    <Resource Include="image\carte\10-coeur-img.png" />
-    <Resource Include="image\carte\10-pique-img.png" />
-    <Resource Include="image\carte\10-trefle-img.png" />
-    <Resource Include="image\carte\D-carreau-img.png" />
-    <Resource Include="image\carte\D-coeur-img.png" />
-    <Resource Include="image\carte\D-pique-img.png" />
-    <Resource Include="image\carte\D-trefle-img.png" />
-    <Resource Include="image\carte\dos-08-img.png" />
-    <Resource Include="image\carte\R-carreau-img.png" />
-    <Resource Include="image\carte\R-coeur-img.png" />
-    <Resource Include="image\carte\R-pique-img.png" />
-    <Resource Include="image\carte\R-trefle-img.png" />
-    <Resource Include="image\carte\V-carreau-img.png" />
-    <Resource Include="image\carte\V-coeur-img.png" />
-    <Resource Include="image\carte\V-pique-img.png" />
-    <Resource Include="image\carte\V-trefle-img.png" />
+    <Resource Include="data\img\Background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\Background.jpg" />
+    <Resource Include="data\img\cartes\back-blue-75-1.png" />
+    <Resource Include="data\img\cartes\back-blue-75-2.png" />
+    <Resource Include="data\img\cartes\back-blue-75-3.png" />
+    <Resource Include="data\img\cartes\back-red-75-1.png" />
+    <Resource Include="data\img\cartes\back-red-75-2.png" />
+    <Resource Include="data\img\cartes\back-red-75-3.png" />
+    <Resource Include="data\img\cartes\clubs-10-75.png" />
+    <Resource Include="data\img\cartes\clubs-2-75.png" />
+    <Resource Include="data\img\cartes\clubs-3-75.png" />
+    <Resource Include="data\img\cartes\clubs-4-75.png" />
+    <Resource Include="data\img\cartes\clubs-5-75.png" />
+    <Resource Include="data\img\cartes\clubs-6-75.png" />
+    <Resource Include="data\img\cartes\clubs-7-75.png" />
+    <Resource Include="data\img\cartes\clubs-8-75.png" />
+    <Resource Include="data\img\cartes\clubs-9-75.png" />
+    <Resource Include="data\img\cartes\clubs-a-75.png" />
+    <Resource Include="data\img\cartes\clubs-j-75.png" />
+    <Resource Include="data\img\cartes\clubs-k-75.png" />
+    <Resource Include="data\img\cartes\clubs-q-75.png" />
+    <Resource Include="data\img\cartes\diamonds-10-75.png" />
+    <Resource Include="data\img\cartes\diamonds-2-75.png" />
+    <Resource Include="data\img\cartes\diamonds-3-75.png" />
+    <Resource Include="data\img\cartes\diamonds-4-75.png" />
+    <Resource Include="data\img\cartes\diamonds-5-75.png" />
+    <Resource Include="data\img\cartes\diamonds-6-75.png" />
+    <Resource Include="data\img\cartes\diamonds-7-75.png" />
+    <Resource Include="data\img\cartes\diamonds-8-75.png" />
+    <Resource Include="data\img\cartes\diamonds-9-75.png" />
+    <Resource Include="data\img\cartes\diamonds-a-75.png" />
+    <Resource Include="data\img\cartes\diamonds-j-75.png" />
+    <Resource Include="data\img\cartes\diamonds-k-75.png" />
+    <Resource Include="data\img\cartes\diamonds-q-75.png" />
+    <Resource Include="data\img\cartes\hearts-10-75.png" />
+    <Resource Include="data\img\cartes\hearts-2-75.png" />
+    <Resource Include="data\img\cartes\hearts-3-75.png" />
+    <Resource Include="data\img\cartes\hearts-4-75.png" />
+    <Resource Include="data\img\cartes\hearts-5-75.png" />
+    <Resource Include="data\img\cartes\hearts-6-75.png" />
+    <Resource Include="data\img\cartes\hearts-7-75.png" />
+    <Resource Include="data\img\cartes\hearts-8-75.png" />
+    <Resource Include="data\img\cartes\hearts-9-75.png" />
+    <Resource Include="data\img\cartes\hearts-a-75.png" />
+    <Resource Include="data\img\cartes\hearts-j-75.png" />
+    <Resource Include="data\img\cartes\hearts-k-75.png" />
+    <Resource Include="data\img\cartes\hearts-q-75.png" />
+    <Resource Include="data\img\cartes\joker-b-75.png" />
+    <Resource Include="data\img\cartes\joker-r-75.png" />
+    <Resource Include="data\img\cartes\spades-10-75.png" />
+    <Resource Include="data\img\cartes\spades-2-75.png" />
+    <Resource Include="data\img\cartes\spades-3-75.png" />
+    <Resource Include="data\img\cartes\spades-4-75.png" />
+    <Resource Include="data\img\cartes\spades-5-75.png" />
+    <Resource Include="data\img\cartes\spades-6-75.png" />
+    <Resource Include="data\img\cartes\spades-7-75.png" />
+    <Resource Include="data\img\cartes\spades-8-75.png" />
+    <Resource Include="data\img\cartes\spades-9-75.png" />
+    <Resource Include="data\img\cartes\spades-a-75.png" />
+    <Resource Include="data\img\cartes\spades-j-75.png" />
+    <Resource Include="data\img\cartes\spades-k-75.png" />
+    <Resource Include="data\img\cartes\spades-q-75.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
