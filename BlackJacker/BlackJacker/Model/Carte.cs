@@ -24,7 +24,7 @@ namespace BlackJacker.Model
             pathImage = String.Format("/data/img/cartes/{0}-{1}-75.png", couleur, nom);
             if (p_nom.Equals("a"))
             { 
-                valeur = 1; 
+                valeur = 11; 
             }
             else 
             {

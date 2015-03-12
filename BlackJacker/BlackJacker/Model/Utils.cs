@@ -8,18 +8,21 @@ namespace BlackJacker.Model
 {
     public class Utils
     {
-        private Utils instance;
-
-        private Utils() { }
-
-        public Utils Instance()
+        private static Utils instance;
+        public static Utils Instance
         {
-            if (instance == null)
+            get
             {
-                instance = new Utils();   
+                if (instance == null)
+                {
+                    instance = new Utils();
+                }
+
+                return instance;
             }
-            return instance;
         }
+
+        public Utils() { }
 
         public int GetScore(List<Carte> cartes)
         {

@@ -66,11 +66,11 @@
                 <Grid Margin="50,10,0,10">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="Votre score : " HorizontalAlignment="Left" FontSize="16">
-                            <Run x:Name="ScoreNoSplit" Text="10"/>
+                            <Run x:Name="ScoreNoSplit" />
                         </TextBlock>
 
                         <TextBlock Text="Montant parié : " HorizontalAlignment="Left" FontSize="16">
-                            <Run x:Name="BetNoSplit" Text="10" />
+                            <Run x:Name="BetNoSplit" />
                         </TextBlock>
                     </StackPanel>
                 </Grid>
@@ -85,10 +85,10 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="0,10,0,0" HorizontalAlignment="Center">
-                    <Button Content="Carte" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200"/>
-                    <Button Content="Je reste" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200"/>
-                    <Button Content="Split" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200"/>
-                    <Button Content="Double" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200"/>
+                    <Button Content="Carte" x:Name="CarteNoSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="CarteNoSplit_Click"/>
+                    <Button Content="Je reste" x:Name="ResteNoSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="ResteNoSplit_Click"/>
+                    <Button Content="Split" x:Name="SplitNoSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="SplitNoSplit_Click"/>
+                    <Button Content="Double" x:Name="DoubleNoSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="DoubleNoSplit_Click"/>
                 </StackPanel>
 
             </StackPanel>
@@ -147,7 +147,7 @@
             <TextBlock  Text="Solde : " FontSize="30" FontWeight="Bold" Margin="10,0,0,0"/>
 
             <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center">
-                <Run x:Name="MontantTotal" Text="10" />
+                <Run x:Name="MontantTotal" />
                 <Run Text="€" />
             </TextBlock>
         </StackPanel>
