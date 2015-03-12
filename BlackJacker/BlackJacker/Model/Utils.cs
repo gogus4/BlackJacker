@@ -8,6 +8,7 @@ namespace BlackJacker.Model
 {
     public class Utils
     {
+
         private static Utils instance;
         public static Utils Instance
         {
@@ -27,22 +28,42 @@ namespace BlackJacker.Model
         public int GetScore(List<Carte> cartes)
         {
             int score = 0;
+            int numberOfAs = 0;
             foreach (var carte in cartes)
             {
+                if (carte.nom == "a")
+                {
+                    numberOfAs++;
+                }
                 score += carte.valeur;
             }
+
+            if (numberOfAs > 0)
+            {
+                if (score > 21)
+                {
+                    score -= 10;
+                }
+            }
+
             return score;
         }
 
 
-        public Boolean PlayerWin(Croupier croupier, Joueur joueur)
+        public int PlayerWin(Croupier croupier, Joueur joueur)
         {
+            int value = 0;
+
             if (GetScore(croupier.listSimple) > GetScore(joueur.listSimple))
             {
-                return false;
+                value++;
+            }
+            if (GetScore(croupier.listSimple) > GetScore(joueur.listSplit))
+            {
+                value++;
             }
 
-            return true;
+            return value;
         }
 
         public void UpdatePlayer()
@@ -50,6 +71,29 @@ namespace BlackJacker.Model
 
         }
 
+        public void UpdatePartie(Croupier croupier, Joueur joueur)
+        {
+            if (joueur.isSplit)
+            {
+                if (PlayerWin(croupier, joueur) == 2)
+                {
+                    joueur.jeton += joueur.mise * 2;
+                }
+
+            }
+            else
+            {
+                if (PlayerWin(croupier, joueur) == 1)
+                {
+                    joueur.jeton += joueur.mise;
+                }
+
+            }
+            // réinitialiser l'interface 
+
+        }
 
     }
+
 }
+

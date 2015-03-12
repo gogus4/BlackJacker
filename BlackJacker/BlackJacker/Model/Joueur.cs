@@ -12,6 +12,8 @@ namespace BlackJacker.Model
 
         public List<Carte> listSplit { get; set; }
 
+        public Boolean isSplit { get; set; }
+
         public int mise { get; set; }
 
         public Joueur()
@@ -44,6 +46,8 @@ namespace BlackJacker.Model
         {
             listSplit.Add(carte);
         }
+
+       
 
     }
 }
