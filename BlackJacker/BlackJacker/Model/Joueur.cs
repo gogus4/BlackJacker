@@ -18,6 +18,7 @@ namespace BlackJacker.Model
         {
 
         }
+
         public void Split()
         {
 
@@ -27,14 +28,22 @@ namespace BlackJacker.Model
                 listSimple.Remove(listSimple[0]);
             }
         }
+
         public void InitialiserJeton()
         {
             jeton = 100;
         }
+
         public void Miserjeton(int valueMiser)
         {
             mise = valueMiser;
             jeton -= mise;
         }
+
+        public void AjouterSplit(Carte carte)
+        {
+            listSplit.Add(carte);
+        }
+
     }
 }
