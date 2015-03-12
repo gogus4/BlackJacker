@@ -10,13 +10,13 @@ namespace BlackJacker.Model
     {
         private Utils instance;
 
-        private Utils() { }
+        public Utils() { }
 
         public Utils Instance()
         {
             if (instance == null)
             {
-                instance = new Utils();   
+                instance = new Utils();
             }
             return instance;
         }
@@ -32,14 +32,20 @@ namespace BlackJacker.Model
         }
 
 
-        public Boolean PlayerWin(Croupier croupier, Joueur joueur)
+        public int PlayerWin(Croupier croupier, Joueur joueur)
         {
+            int value = 0;
+
             if (GetScore(croupier.listSimple) > GetScore(joueur.listSimple))
             {
-                return false;
+                value++;
+            }
+            if (GetScore(croupier.listSimple) > GetScore(joueur.listSplit))
+            {
+                value++;
             }
 
-            return true;
+            return value;
         }
 
         public void UpdatePlayer()
@@ -47,6 +53,29 @@ namespace BlackJacker.Model
 
         }
 
+        public void UpdatePartie(Croupier croupier, Joueur joueur)
+        {
+            if (joueur.isSplit)
+            {
+                if (PlayerWin(croupier, joueur) == 2)
+                {
+                    joueur.jeton += joueur.mise * 2;
+                }
+
+            }
+            else
+            {
+                if (PlayerWin(croupier, joueur) == 1)
+                {
+                    joueur.jeton += joueur.mise;
+                }
+
+            }
+            // réinitialiser l'interface 
+
+        }
 
     }
+
 }
+
