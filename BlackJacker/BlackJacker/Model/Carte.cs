@@ -21,10 +21,10 @@ namespace BlackJacker.Model
         {
             nom = p_nom;
             couleur = p_couleur;
-            pathImage = Path.GetFullPath(String.Format("/data/img/carte/{0}-{1}-75.png", couleur, nom));
-            if (p_nom.Equals("as"))
+            pathImage = String.Format("/data/img/cartes/{0}-{1}-75.png", couleur, nom);
+            if (p_nom.Equals("a"))
             { 
-                valeur = 1; 
+                valeur = 11; 
             }
             else 
             {
@@ -32,13 +32,12 @@ namespace BlackJacker.Model
                 {
                     valeur = 10;
                 }
+
                 else
                 {
                     valeur = Convert.ToInt32(p_nom);
                 }
             }
-           
-
         }
     }
 }
