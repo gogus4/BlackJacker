@@ -31,7 +31,10 @@ namespace BlackJacker.Model
 
         public Carte Retirer() // Retirer la premiere carte du paquet
         {
-            return null;
+            int index = cartes.Count() - 1;
+            Carte carte = cartes.ElementAt(index);
+            cartes.RemoveAt(index);
+            return carte;
         }
     }
 }
