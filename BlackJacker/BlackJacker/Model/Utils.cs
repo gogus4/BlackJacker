@@ -42,6 +42,11 @@ namespace BlackJacker.Model
             return true;
         }
 
+        public void UpdatePlayer()
+        {
+
+        }
+
 
     }
 }
