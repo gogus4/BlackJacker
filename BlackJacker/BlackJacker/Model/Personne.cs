@@ -14,7 +14,7 @@ namespace BlackJacker.Model
 
         public Personne()
         {
-
+            listSimple = new List<Carte>();
         }
 
         public void AjouterCarte(Carte carte)

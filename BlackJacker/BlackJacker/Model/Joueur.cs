@@ -16,7 +16,7 @@ namespace BlackJacker.Model
 
         public Joueur()
         {
-
+            InitialiserJeton();
         }
 
         public void Split()
