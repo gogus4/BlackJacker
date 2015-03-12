@@ -15,11 +15,11 @@ namespace BlackJacker.Model
 
         public string pathImage { get; set; }
 
-        public Carte(string p_nom, string p_valeur)
+        public Carte(string p_nom, string p_valeur,string p_path)
         {
             nom = p_nom;
             couleur = p_valeur;
-            pathImage = String.Format(@"\image\carte\{0}-{1}-img.png", p_nom, p_nom);
+            pathImage = p_path;
         }
     }
 }
