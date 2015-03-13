@@ -127,7 +127,14 @@ namespace BlackJacker
                     DoubleNoSplit.IsEnabled = false;
             }
 
-            else MessageBox.Show("Le montant de votre pari doit être supérieur à 0 €");
+            else
+            {
+                if(int.Parse(ValueSlider.Text.ToString()) > joueur.jeton)
+                    MessageBox.Show("Vous n'avez pas assez d'argent");
+
+                else
+                    MessageBox.Show("Le montant de votre pari doit être supérieur à 0 €");
+            }
         }
 
         private void StartGame_Click(object sender, RoutedEventArgs e)
