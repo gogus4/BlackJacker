@@ -270,6 +270,9 @@ namespace BlackJacker
                 JoueurSplit.Children.Add(Img);
 
                 SplitNoSplit.Visibility = Visibility.Collapsed;
+
+                if (joueur.jeton < joueur.mise)
+                    DoubleNoSplit.IsEnabled = false;
             }
 
             else if (joueur.Split() == 1)
