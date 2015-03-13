@@ -302,6 +302,8 @@ namespace BlackJacker
                 Img.Height = 100;
                 JoueurNoSplit.Children.Add(Img);
 
+                ScoreSplit.Text = Utils.Instance.GetScore(joueur.listSimple).ToString();
+
                 Reste();
             }
 
