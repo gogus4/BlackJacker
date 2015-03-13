@@ -43,9 +43,6 @@ namespace BlackJacker
             joueur = new Joueur();
             croupier = new Croupier();
 
-            isDouble = false;
-            isDoubled = false;
-
             Restart.IsEnabled = false;
 
             MontantTotal.Text = joueur.jeton.ToString();
@@ -69,14 +66,10 @@ namespace BlackJacker
             SplitNoSplit.Visibility = Visibility.Visible;
             DoubleNoSplit.Visibility = Visibility.Visible;
 
-
             DoubleNoSplit.IsEnabled = true;
             SplitNoSplit.IsEnabled = true;
 
             CarteSplit.Visibility = Visibility.Visible;
-
-            isDouble = false;
-            isDoubled = false;
 
             if (Slider.Value > 0 && joueur.jeton >= int.Parse(ValueSlider.Text.ToString()))
             {
@@ -224,7 +217,6 @@ namespace BlackJacker
                 message = "Vous avez perdu la partie";
             }
 
-
             if (MessageBox.Show(message + Environment.NewLine + "Voulez-vous recommencer la partie ?", "Recommencer", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 Utils.Instance.UpdatePartie(croupier, joueur);
@@ -246,7 +238,6 @@ namespace BlackJacker
 
             if (joueur.jeton < 2)
             {
-
                 Restart.IsEnabled = true;
             }
         }
@@ -303,7 +294,15 @@ namespace BlackJacker
                 MontantTotal.Text = joueur.jeton.ToString();
 
                 DoubleNoSplit.Visibility = Visibility.Collapsed;
-                isDouble = true;
+
+                croupier.Distribuer(joueur, false);
+                Image Img = new Image();
+                Img.Source = new BitmapImage(new Uri("pack://application:,,,/BlackJacker;component/" + joueur.listSimple[joueur.listSimple.Count - 1].pathImage));
+                Img.Width = 100;
+                Img.Height = 100;
+                JoueurNoSplit.Children.Add(Img);
+
+                Reste();
             }
 
             else
