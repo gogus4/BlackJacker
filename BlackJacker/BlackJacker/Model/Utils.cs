@@ -77,6 +77,10 @@ namespace BlackJacker.Model
             {
                 if (PlayerWin(croupier, joueur) == 2)
                 {
+                    joueur.jeton += joueur.mise * 4;
+                } 
+                else if (PlayerWin(croupier, joueur) == 1)
+                {
                     joueur.jeton += joueur.mise * 2;
                 }
 
@@ -85,11 +89,11 @@ namespace BlackJacker.Model
             {
                 if (PlayerWin(croupier, joueur) == 1)
                 {
-                    joueur.jeton += joueur.mise;
+                    joueur.jeton += joueur.mise * 2;
                 }
 
             }
-            // réinitialiser l'interface 
+            // TODO : réinitialiser l'interface 
 
         }
 
