@@ -64,7 +64,7 @@ namespace BlackJacker
 
             CarteSplit.Visibility = Visibility.Visible;
 
-            if (Slider.Value > 0 && joueur.jeton >= Slider.Value)
+            if (Slider.Value > 0 && joueur.jeton >= int.Parse(ValueSlider.Text.ToString()))
             {
                 StackNoSplit.Visibility = Visibility.Visible;
                 StackCroupier.Visibility = Visibility.Visible;
@@ -137,7 +137,13 @@ namespace BlackJacker
 
             if (newScore > 21) // fin de partie
             {
-                MessageBox.Show("Vous avez perdu cette partie.");
+                if (!joueur.isSplit)
+                {
+                    Reste();
+                }
+
+                else
+                    MessageBox.Show("Vous avez perdu cette partie.");
 
                 CarteNoSplit.Visibility = Visibility.Collapsed;
             }
