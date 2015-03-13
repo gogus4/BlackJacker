@@ -167,7 +167,7 @@ namespace BlackJacker
             String message = "";
             if (Utils.Instance.PlayerWin(croupier, joueur) > 0)
             {
-                message = "Felicitation, vous avez gagner la partie";
+                message = "Felicitation, vous avez gagné la partie";
             }
 
             else

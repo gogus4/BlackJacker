@@ -41,9 +41,7 @@ namespace BlackJacker.Model
                 Distribuer(this, false);
 
             }
-            util.UpdatePartie(this, joueur);
-            
+            util.UpdatePartie(this, joueur);   
         }
-
     }
 }

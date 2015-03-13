@@ -53,14 +53,21 @@ namespace BlackJacker.Model
         public int PlayerWin(Croupier croupier, Joueur joueur)
         {
             int value = 0;
+            if (GetScore(joueur.listSimple) <= 21)
+            {
+                if (GetScore(joueur.listSimple) >= GetScore(croupier.listSimple) || GetScore(croupier.listSimple) > 21 )
+                {
+                    value++;
+                }
 
-            if (GetScore(joueur.listSimple) >= GetScore(croupier.listSimple) && GetScore(joueur.listSimple) <= 21 )
-            {
-                value++;
             }
-            if (GetScore(joueur.listSplit) >= GetScore(croupier.listSimple) && GetScore(joueur.listSplit) <= 21)
+
+            if (GetScore(joueur.listSplit) <= 21 && joueur.isSplit)
             {
-                value++;
+                if (GetScore(joueur.listSplit) >= GetScore(croupier.listSimple) || GetScore(croupier.listSimple) > 21 )
+                {
+                    value++;
+                }
             }
 
             return value;
@@ -75,22 +82,11 @@ namespace BlackJacker.Model
         {
             if (PlayerWin(croupier, joueur) == 2)
             {
-                if (Utils.Instance.GetScore(joueur.listSimple) == 21 && Utils.Instance.GetScore(joueur.listSplit) == 21)
-                {
-                    joueur.jeton += joueur.mise * 5;
-                }
-                else if (Utils.Instance.GetScore(joueur.listSimple) == 21 || Utils.Instance.GetScore(joueur.listSplit) == 21)
-                {
-                    joueur.jeton += joueur.mise * 4.5;
-                }
-                else
-                {
-                    joueur.jeton += joueur.mise * 4;
-                }
+                joueur.jeton += joueur.mise * 4;
             }
             else if (PlayerWin(croupier, joueur) == 1)
             {
-                if (Utils.Instance.GetScore(joueur.listSimple) == 21 || Utils.Instance.GetScore(joueur.listSplit) == 21)
+                if (Utils.Instance.GetScore(joueur.listSimple) == 21 && joueur.isSplit == false)
                 {
                     joueur.jeton += joueur.mise * 2.5;
                 }
@@ -99,9 +95,6 @@ namespace BlackJacker.Model
                     joueur.jeton += joueur.mise * 2;
                 }
             }
-          
-            // TODO : réinitialiser l'interface 
-
         }
 
     }

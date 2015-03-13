@@ -119,7 +119,6 @@
 
                 <StackPanel Orientation="Vertical" Margin="0,10,0,0" HorizontalAlignment="Center">
                     <Button Content="Carte" x:Name="CarteSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="CarteSplit_Click"/>
-                    <Button Content="Double" x:Name="DoubleSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="DoubleSplit_Click"/>
                 </StackPanel>
 
             </StackPanel>
