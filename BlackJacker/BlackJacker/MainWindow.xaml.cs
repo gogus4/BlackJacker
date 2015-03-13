@@ -34,12 +34,17 @@ namespace BlackJacker
         public Croupier croupier { get; set; }
 
         public Boolean IsLoose { get; set; }
+        public Boolean isDoubled { get; set; }
+        public Boolean isDouble { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
             joueur = new Joueur();
             croupier = new Croupier();
+
+            isDouble = false;
+            isDoubled = false;
 
             MontantTotal.Text = joueur.jeton.ToString();
 
@@ -62,7 +67,12 @@ namespace BlackJacker
             SplitNoSplit.Visibility = Visibility.Visible;
             DoubleNoSplit.Visibility = Visibility.Visible;
 
+            SplitNoSplit.IsEnabled = true;
+
             CarteSplit.Visibility = Visibility.Visible;
+
+            isDouble = false;
+            isDoubled = false;
 
             if (Slider.Value > 0 && joueur.jeton >= int.Parse(ValueSlider.Text.ToString()))
             {
@@ -108,6 +118,11 @@ namespace BlackJacker
                 BetNoSplit.Text = ValueSlider.Text.ToString();
 
                 Start.Visibility = Visibility.Collapsed;
+
+                if (joueur.listSimple[0].nom != joueur.listSimple[1].nom)
+                {
+                    SplitNoSplit.IsEnabled = false;
+                }
             }
 
             else MessageBox.Show("Le montant de votre pari doit être supérieur à 0 €");
@@ -122,6 +137,14 @@ namespace BlackJacker
         {
             SplitNoSplit.Visibility = Visibility.Collapsed;
             DoubleNoSplit.Visibility = Visibility.Collapsed;
+
+            if (isDoubled && isDouble)
+            {
+                MessageBox.Show("Vous ne pouvez pas demander de cartes car vous avez doublé.");
+                return;
+            }
+
+            isDoubled = true;
 
             croupier.Distribuer(joueur, false);
 
@@ -253,6 +276,7 @@ namespace BlackJacker
                 MontantTotal.Text = joueur.jeton.ToString();
 
                 DoubleNoSplit.Visibility = Visibility.Collapsed;
+                isDouble = true;
             }
 
             else
