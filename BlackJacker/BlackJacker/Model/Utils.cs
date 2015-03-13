@@ -73,25 +73,33 @@ namespace BlackJacker.Model
 
         public void UpdatePartie(Croupier croupier, Joueur joueur)
         {
-            if (joueur.isSplit)
+            if (PlayerWin(croupier, joueur) == 2)
             {
-                if (PlayerWin(croupier, joueur) == 2)
+                if (Utils.Instance.GetScore(joueur.listSimple) == 21 && Utils.Instance.GetScore(joueur.listSplit) == 21)
+                {
+                    joueur.jeton += joueur.mise * 5;
+                }
+                else if (Utils.Instance.GetScore(joueur.listSimple) == 21 || Utils.Instance.GetScore(joueur.listSplit) == 21)
+                {
+                    joueur.jeton += joueur.mise * 4.5;
+                }
+                else
                 {
                     joueur.jeton += joueur.mise * 4;
-                } 
-                else if (PlayerWin(croupier, joueur) == 1)
-                {
-                    joueur.jeton += joueur.mise * 2;
                 }
             }
-            else
+            else if (PlayerWin(croupier, joueur) == 1)
             {
-                if (PlayerWin(croupier, joueur) == 1)
+                if (Utils.Instance.GetScore(joueur.listSimple) == 21 || Utils.Instance.GetScore(joueur.listSplit) == 21)
+                {
+                    joueur.jeton += joueur.mise * 2.5;
+                }
+                else
                 {
                     joueur.jeton += joueur.mise * 2;
                 }
-
             }
+          
             // TODO : réinitialiser l'interface 
 
         }
