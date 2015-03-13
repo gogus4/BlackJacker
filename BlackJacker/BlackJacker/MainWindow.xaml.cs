@@ -67,6 +67,7 @@ namespace BlackJacker
             SplitNoSplit.Visibility = Visibility.Visible;
             DoubleNoSplit.Visibility = Visibility.Visible;
 
+            DoubleNoSplit.IsEnabled = true;
             SplitNoSplit.IsEnabled = true;
 
             CarteSplit.Visibility = Visibility.Visible;
@@ -120,9 +121,10 @@ namespace BlackJacker
                 Start.Visibility = Visibility.Collapsed;
 
                 if (joueur.listSimple[0].nom != joueur.listSimple[1].nom)
-                {
                     SplitNoSplit.IsEnabled = false;
-                }
+
+                if (joueur.jeton < joueur.mise)
+                    DoubleNoSplit.IsEnabled = false;
             }
 
             else MessageBox.Show("Le montant de votre pari doit être supérieur à 0 €");
@@ -267,7 +269,7 @@ namespace BlackJacker
 
         private void DoubleNoSplit_Click(object sender, RoutedEventArgs e)
         {
-            if (joueur.jeton > int.Parse(ValueSlider.Text.ToString()))
+            if (joueur.jeton >= int.Parse(ValueSlider.Text.ToString()))
             {
                 joueur.mise += int.Parse(ValueSlider.Text.ToString());
                 joueur.jeton -= int.Parse(ValueSlider.Text.ToString());
