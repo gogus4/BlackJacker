@@ -64,7 +64,7 @@ namespace BlackJacker
 
             CarteSplit.Visibility = Visibility.Visible;
 
-            if (Slider.Value > 0 && joueur.jeton > Slider.Value)
+            if (Slider.Value > 0 && joueur.jeton >= Slider.Value)
             {
                 StackNoSplit.Visibility = Visibility.Visible;
                 StackCroupier.Visibility = Visibility.Visible;
