@@ -22,7 +22,7 @@ namespace BlackJacker.Model
             listSplit = new List<Carte>();
         }
 
-        public Boolean Split()
+        public int Split()
         {
             if (jeton > mise)
             {
@@ -33,11 +33,19 @@ namespace BlackJacker.Model
 
                     isSplit = true;
 
-                    return true;
+                    return 0;
+                }
+
+                else
+                {
+                    return 1;
                 }
             }
 
-            return false;
+            else
+            {
+                return -1;
+            }
         }
 
         public void InitialiserJeton()

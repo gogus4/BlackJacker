@@ -203,7 +203,7 @@ namespace BlackJacker
 
         private void SplitNoSplit_Click(object sender, RoutedEventArgs e)
         {
-            if (joueur.Split())
+            if (joueur.Split() == 0)
             {
                 StackSplit.Visibility = Visibility.Visible;
 
@@ -226,9 +226,14 @@ namespace BlackJacker
                 SplitNoSplit.Visibility = Visibility.Collapsed;
             }
 
+            else if (joueur.Split() == 1)
+            {
+                MessageBox.Show("Les deux cartes ne sont pas identiques.");
+            }
+
             else
             {
-                MessageBox.Show("Les deux cartes ne sont pas identiques");
+                MessageBox.Show("Vous n'avez pas assez d'argent.");
             }
         }
 
