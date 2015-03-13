@@ -29,6 +29,8 @@ namespace BlackJacker.Model
                 listSplit.Add(listSimple[1]);
                 listSimple.Remove(listSimple[1]);
 
+                isSplit = true;
+
                 return true;
             }
 

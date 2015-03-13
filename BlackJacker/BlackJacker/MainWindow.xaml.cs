@@ -166,19 +166,23 @@ namespace BlackJacker
             }
 
 
-            if (MessageBox.Show(message + Environment.NewLine + "Voulez-vous recommencer la partie ?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+            if (MessageBox.Show(message + Environment.NewLine + "Voulez-vous recommencer la partie ?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 Utils.Instance.UpdatePartie(croupier, joueur);
                 StackNoSplit.Visibility = Visibility.Collapsed;
+                StackSplit.Visibility = Visibility.Collapsed;
                 StackCroupier.Visibility = Visibility.Collapsed;
                 Paquet.Visibility = Visibility.Collapsed;
 
-                Start.Visibility = Visibility.Visible;    
+                Start.Visibility = Visibility.Visible;
+
+                MontantTotal.Text = joueur.jeton.ToString();
             }
 
             else
             {
                 Application.Current.Shutdown();
+                Environment.Exit(0);
             }
         }
 

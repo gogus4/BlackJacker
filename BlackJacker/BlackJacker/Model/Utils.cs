@@ -54,11 +54,11 @@ namespace BlackJacker.Model
         {
             int value = 0;
 
-            if (GetScore(joueur.listSimple) > GetScore(croupier.listSimple))
+            if (GetScore(joueur.listSimple) >= GetScore(croupier.listSimple))
             {
                 value++;
             }
-            if (GetScore(joueur.listSplit) > GetScore(croupier.listSimple))
+            if (GetScore(joueur.listSplit) >= GetScore(croupier.listSimple))
             {
                 value++;
             }
@@ -83,7 +83,6 @@ namespace BlackJacker.Model
                 {
                     joueur.jeton += joueur.mise * 2;
                 }
-
             }
             else
             {
