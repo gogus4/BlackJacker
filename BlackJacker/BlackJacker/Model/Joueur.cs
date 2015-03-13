@@ -19,16 +19,20 @@ namespace BlackJacker.Model
         public Joueur()
         {
             InitialiserJeton();
+            listSplit = new List<Carte>();
         }
 
-        public void Split()
+        public Boolean Split()
         {
-
             if (listSimple[0].nom == listSimple[1].nom)
             {
-                listSplit.Add(listSimple[0]);
-                listSimple.Remove(listSimple[0]);
+                listSplit.Add(listSimple[1]);
+                listSimple.Remove(listSimple[1]);
+
+                return true;
             }
+
+            return false;
         }
 
         public void InitialiserJeton()
