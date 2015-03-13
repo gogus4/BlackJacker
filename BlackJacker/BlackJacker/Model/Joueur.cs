@@ -24,14 +24,17 @@ namespace BlackJacker.Model
 
         public Boolean Split()
         {
-            if (listSimple[0].nom == listSimple[1].nom)
+            if (jeton > mise)
             {
-                listSplit.Add(listSimple[1]);
-                listSimple.Remove(listSimple[1]);
+                if (listSimple[0].nom == listSimple[1].nom)
+                {
+                    listSplit.Add(listSimple[1]);
+                    listSimple.Remove(listSimple[1]);
 
-                isSplit = true;
+                    isSplit = true;
 
-                return true;
+                    return true;
+                }
             }
 
             return false;
