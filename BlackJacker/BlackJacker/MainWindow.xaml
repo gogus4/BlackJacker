@@ -127,7 +127,7 @@
         <StackPanel x:Name="Start" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2">
             <TextBlock Text="Quel montant voulez-vous pariez ?  " FontSize="16" Margin="0,8,0,0"/>
             <StackPanel Orientation="Vertical">
-                <Slider x:Name="Slider" Maximum="100" Margin="0,10,0,0" Minimum="0" Width="160" TickFrequency="1.0"/>
+                <Slider x:Name="Slider" Maximum="100" Margin="0,10,0,0" Minimum="2" Width="160" TickFrequency="1.0"/>
                 <TextBlock HorizontalAlignment="Center">
                     <Run x:Name="ValueSlider" Text="{Binding ElementName=Slider, Path=Value, StringFormat=0}"/>
                     <Run Text=" € "/>
