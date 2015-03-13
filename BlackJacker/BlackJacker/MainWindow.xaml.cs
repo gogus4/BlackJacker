@@ -63,7 +63,6 @@ namespace BlackJacker
             DoubleNoSplit.Visibility = Visibility.Visible;
 
             CarteSplit.Visibility = Visibility.Visible;
-            DoubleSplit.Visibility = Visibility.Visible;
 
             if (Slider.Value > 0 && joueur.jeton > Slider.Value)
             {
@@ -258,8 +257,6 @@ namespace BlackJacker
 
         private void CarteSplit_Click(object sender, RoutedEventArgs e)
         {
-            DoubleSplit.Visibility = Visibility.Collapsed;
-
             croupier.Distribuer(joueur, true);
 
             Image Img = new Image();
@@ -276,25 +273,6 @@ namespace BlackJacker
             {
                 MessageBox.Show("Vous avez perdu cette partie.");
                 CarteSplit.Visibility = Visibility.Collapsed;
-            }
-        }
-
-        private void DoubleSplit_Click(object sender, RoutedEventArgs e)
-        {
-            if (joueur.jeton > int.Parse(ValueSlider.Text.ToString()))
-            {
-                joueur.mise += int.Parse(ValueSlider.Text.ToString());
-                joueur.jeton -= int.Parse(ValueSlider.Text.ToString());
-                BetSplit.Text = (int.Parse(BetSplit.Text.ToString()) * 2).ToString();
-
-                MontantTotal.Text = joueur.jeton.ToString();
-
-                DoubleSplit.Visibility = Visibility.Collapsed;
-            }
-
-            else
-            {
-                MessageBox.Show("Vous n'avez pas assez de jeton pour pouvoir doubler.");
             }
         }
     }
