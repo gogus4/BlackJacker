@@ -46,6 +46,8 @@ namespace BlackJacker
             isDouble = false;
             isDoubled = false;
 
+            Restart.IsEnabled = false;
+
             MontantTotal.Text = joueur.jeton.ToString();
 
             _instance = this;
@@ -231,6 +233,9 @@ namespace BlackJacker
             {
                 Application.Current.Shutdown();
             }
+
+            if (joueur.jeton < 2)
+                Restart.IsEnabled = true;
         }
 
         private void ResteNoSplit_Click(object sender, RoutedEventArgs e)
