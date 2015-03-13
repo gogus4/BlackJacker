@@ -178,7 +178,7 @@ namespace BlackJacker
 
             else
             {
-                this.Close();
+                Application.Current.Shutdown();
             }
         }
 
