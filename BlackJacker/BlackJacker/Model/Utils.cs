@@ -40,9 +40,13 @@ namespace BlackJacker.Model
 
             if (numberOfAs > 0)
             {
-                if (score > 21)
+                for (int i = 0; i < numberOfAs; i++ )
                 {
-                    score -= 10;
+                    if (score > 21)
+                    {
+                        score -= 10;
+
+                    }
                 }
             }
 
