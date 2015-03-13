@@ -20,6 +20,7 @@ namespace BlackJacker.Model
         {
             InitialiserJeton();
             listSplit = new List<Carte>();
+            isSplit = false;
         }
 
         public int Split()
