@@ -48,7 +48,22 @@ namespace BlackJacker
 
         public void Init()
         {
-            IsLoose = false;
+            JoueurNoSplit.Children.Clear();
+            JoueurSplit.Children.Clear();
+            Banque.Children.Clear();
+            croupier.paquet.Initialiser();
+
+            joueur.listSimple.Clear();
+            joueur.listSplit.Clear();
+            croupier.listSimple.Clear();
+
+            CarteNoSplit.Visibility = Visibility.Visible;
+            ResteNoSplit.Visibility = Visibility.Visible;
+            SplitNoSplit.Visibility = Visibility.Visible;
+            DoubleNoSplit.Visibility = Visibility.Visible;
+
+            CarteSplit.Visibility = Visibility.Visible;
+            DoubleSplit.Visibility = Visibility.Visible;
 
             if (Slider.Value > 0 && joueur.jeton > Slider.Value)
             {
@@ -123,13 +138,9 @@ namespace BlackJacker
 
             if (newScore > 21) // fin de partie
             {
-                if (IsLoose == true)
-                {
-                    Reste();
-                }
-
                 MessageBox.Show("Vous avez perdu cette partie.");
-                IsLoose = true;
+
+                CarteNoSplit.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -182,7 +193,6 @@ namespace BlackJacker
             else
             {
                 Application.Current.Shutdown();
-                Environment.Exit(0);
             }
         }
 
@@ -259,13 +269,8 @@ namespace BlackJacker
 
             if (newScore > 21) // fin de partie
             {
-                if (IsLoose == true)
-                {
-                    Reste();
-                }
-
                 MessageBox.Show("Vous avez perdu cette partie.");
-                IsLoose = true;
+                CarteSplit.Visibility = Visibility.Collapsed;
             }
         }
 

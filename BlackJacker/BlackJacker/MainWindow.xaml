@@ -65,11 +65,11 @@
 
                 <Grid Margin="50,10,0,10">
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Votre score : " HorizontalAlignment="Left" FontSize="16">
+                        <TextBlock Text="Mon score : " HorizontalAlignment="Left" FontSize="16">
                             <Run x:Name="ScoreNoSplit" FontWeight="Bold"/>
                         </TextBlock>
 
-                        <TextBlock Text="Montant parié : " HorizontalAlignment="Left" FontSize="16">
+                        <TextBlock Text="Mise : " HorizontalAlignment="Left" FontSize="16">
                             <Run x:Name="BetNoSplit" />
                             <Run Text="€" />
                         </TextBlock>
@@ -98,11 +98,11 @@
 
                 <Grid Margin="50,10,0,10">
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Votre score : " HorizontalAlignment="Left" FontSize="16">
+                        <TextBlock Text="Mon score : " HorizontalAlignment="Left" FontSize="16">
                             <Run x:Name="ScoreSplit" FontWeight="Bold"/>
                         </TextBlock>
 
-                        <TextBlock Text="Montant parié : " HorizontalAlignment="Left" FontSize="16">
+                        <TextBlock Text="Mise : " HorizontalAlignment="Left" FontSize="16">
                             <Run x:Name="BetSplit" />
                             <Run Text="€" />
                         </TextBlock>
