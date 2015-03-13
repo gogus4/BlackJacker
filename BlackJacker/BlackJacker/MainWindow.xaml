@@ -87,8 +87,6 @@
 
                 <StackPanel Orientation="Vertical" Margin="0,10,0,0" HorizontalAlignment="Center">
                     <Button Content="Carte" x:Name="CarteNoSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="CarteNoSplit_Click"/>
-                    <Button Content="Je reste" x:Name="ResteNoSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="ResteNoSplit_Click"/>
-                    <Button Content="Split" x:Name="SplitNoSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="SplitNoSplit_Click"/>
                     <Button Content="Double" x:Name="DoubleNoSplit" FontSize="20" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="200" Click="DoubleNoSplit_Click"/>
                 </StackPanel>
 
@@ -140,7 +138,10 @@
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,160,0,0" VerticalAlignment="Center">
-            <TextBlock  Text="Solde : " FontSize="30" FontWeight="Bold" Margin="10,0,0,0"/>
+            <Button Content="Je reste" x:Name="ResteNoSplit" Visibility="Collapsed" FontSize="30" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="180" Click="ResteNoSplit_Click"/>
+            <Button Content="Split" x:Name="SplitNoSplit" Visibility="Collapsed" FontSize="30" Background="White" Foreground="Black" FontFamily="Segoe UI Light" Width="180" Click="SplitNoSplit_Click"/>
+
+            <TextBlock  Text="Solde : " FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" />
 
             <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Center">
                 <Run x:Name="MontantTotal" />

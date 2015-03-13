@@ -216,13 +216,15 @@ namespace BlackJacker
             }
 
 
-            if (MessageBox.Show(message + Environment.NewLine + "Voulez-vous recommencer la partie ?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            if (MessageBox.Show(message + Environment.NewLine + "Voulez-vous recommencer la partie ?", "Recommencer", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 Utils.Instance.UpdatePartie(croupier, joueur);
                 StackNoSplit.Visibility = Visibility.Collapsed;
                 StackSplit.Visibility = Visibility.Collapsed;
                 StackCroupier.Visibility = Visibility.Collapsed;
                 Paquet.Visibility = Visibility.Collapsed;
+                SplitNoSplit.Visibility = Visibility.Collapsed;
+                ResteNoSplit.Visibility = Visibility.Collapsed;
 
                 Start.Visibility = Visibility.Visible;
 
