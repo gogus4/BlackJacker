@@ -69,6 +69,7 @@ namespace BlackJacker
             SplitNoSplit.Visibility = Visibility.Visible;
             DoubleNoSplit.Visibility = Visibility.Visible;
 
+
             DoubleNoSplit.IsEnabled = true;
             SplitNoSplit.IsEnabled = true;
 
@@ -131,8 +132,13 @@ namespace BlackJacker
 
             else
             {
-                if(int.Parse(ValueSlider.Text.ToString()) > joueur.jeton)
+                SplitNoSplit.Visibility = Visibility.Collapsed;
+                ResteNoSplit.Visibility = Visibility.Collapsed;
+
+                if (int.Parse(ValueSlider.Text.ToString()) > joueur.jeton)
+                {
                     MessageBox.Show("Vous n'avez pas assez d'argent");
+                }
 
                 else
                     MessageBox.Show("Le montant de votre pari doit être supérieur à 0 €");
@@ -185,6 +191,9 @@ namespace BlackJacker
 
         private void Reste()
         {
+            SplitNoSplit.Visibility = Visibility.Collapsed;
+            ResteNoSplit.Visibility = Visibility.Collapsed;
+
             Banque.Children.RemoveAt(Banque.Children.Count - 1);
 
             Image Img = new Image();
@@ -223,8 +232,7 @@ namespace BlackJacker
                 StackSplit.Visibility = Visibility.Collapsed;
                 StackCroupier.Visibility = Visibility.Collapsed;
                 Paquet.Visibility = Visibility.Collapsed;
-                SplitNoSplit.Visibility = Visibility.Collapsed;
-                ResteNoSplit.Visibility = Visibility.Collapsed;
+                
 
                 Start.Visibility = Visibility.Visible;
 
@@ -237,7 +245,10 @@ namespace BlackJacker
             }
 
             if (joueur.jeton < 2)
+            {
+
                 Restart.IsEnabled = true;
+            }
         }
 
         private void ResteNoSplit_Click(object sender, RoutedEventArgs e)
