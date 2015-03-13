@@ -30,7 +30,7 @@ namespace BlackJacker.Model
                 }
             }
 
-            //Melanger();
+            Melanger();
         }
 
         public void Melanger() // Methode sort
