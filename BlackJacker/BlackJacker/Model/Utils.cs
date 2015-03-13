@@ -54,11 +54,11 @@ namespace BlackJacker.Model
         {
             int value = 0;
 
-            if (GetScore(croupier.listSimple) > GetScore(joueur.listSimple))
+            if (GetScore(joueur.listSimple) > GetScore(croupier.listSimple))
             {
                 value++;
             }
-            if (GetScore(croupier.listSimple) > GetScore(joueur.listSplit))
+            if (GetScore(joueur.listSplit) > GetScore(croupier.listSimple))
             {
                 value++;
             }
