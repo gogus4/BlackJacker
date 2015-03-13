@@ -8,7 +8,7 @@ namespace BlackJacker.Model
 {
     public class Joueur : Personne
     {
-        public int jeton { get; set; }
+        public double jeton { get; set; }
 
         public List<Carte> listSplit { get; set; }
 
