@@ -33,7 +33,7 @@ namespace BlackJacker.Model
             
         }
 
-        public void Jouer(List<Carte> listCartes,Joueur joueur)
+        public void Jouer(List<Carte> listCartes, Joueur joueur)
         { 
             Utils util =new Utils();
             while (util.GetScore(listCartes) < 17)
@@ -41,7 +41,7 @@ namespace BlackJacker.Model
                 Distribuer(this, false);
 
             }
-            util.UpdatePartie(this,joueur);
+            util.UpdatePartie(this, joueur);
             
         }
 
