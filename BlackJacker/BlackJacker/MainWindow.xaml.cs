@@ -314,5 +314,17 @@ namespace BlackJacker
                 CarteSplit.Visibility = Visibility.Collapsed;
             }
         }
+
+        private void Restart_Click(object sender, RoutedEventArgs e)
+        {
+            if (joueur.jeton < 2)
+            {
+                joueur.jeton = 100;
+                MontantTotal.Text = joueur.jeton.ToString();
+            }
+
+            else
+                MessageBox.Show("Vous avez assez d'argent pour faire au moins une partie.");
+        }
     }
 }
